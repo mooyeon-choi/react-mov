@@ -1,123 +1,132 @@
 # React Motion Components Library
 
-React 기반 모션/애니메이션 컴포넌트 라이브러리로, Framer Motion과 Three.js를 활용한 재사용 가능한 컴포넌트들을 shadcn/ui 방식으로 제공합니다.
+A React-based motion/animation component library that provides reusable components utilizing Framer Motion and Three.js in a shadcn/ui style.
 
-## 프로젝트 개요
+## Project Overview
 
-이 프로젝트는 개발자들이 쉽게 복사하여 사용할 수 있는 고품질 애니메이션 컴포넌트를 제공합니다. shadcn/ui의 철학을 따라, npm 패키지가 아닌 소스코드 복사 방식으로 컴포넌트를 배포합니다.
+This project provides high-quality animation components that developers can easily copy and use. Following the shadcn/ui philosophy, components are distributed via source code copying rather than as an npm package.
 
-### 주요 특징
+### Key Features
 
-- 🎨 **Framer Motion** 기반 2D 애니메이션
-- 🎮 **Three.js & React Three Fiber** 기반 3D 그래픽
-- 🎯 **TypeScript** 완벽 지원
-- 🎨 **Tailwind CSS** 스타일링
-- 📦 **shadcn/ui 스타일** 컴포넌트 배포
-- 🚀 **Vite** 기반 빠른 개발 환경
+- 🎨 **Framer Motion** based 2D animations
+- 🎮 **Three.js & React Three Fiber** based 3D graphics
+- 🎯 **TypeScript** full support
+- 🎨 **Tailwind CSS** styling
+- 📦 **shadcn/ui style** component distribution
+- 🚀 **Vite** based fast development environment
 
-## 기술 스택
+## Tech Stack
 
 ### Core
-- **React 19** - UI 프레임워크
-- **TypeScript** - 타입 안전성
-- **Vite** - 빌드 도구 및 개발 서버
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and development server
 
 ### Animation & 3D
-- **Motion** - 새로운 애니메이션 라이브러리 (Framer Motion의 최신 버전)
-- **Framer Motion** - 선언적 애니메이션 라이브러리
-- **Three.js** - 3D 그래픽 라이브러리
-- **@react-three/fiber** - React용 Three.js 렌더러
-- **@react-three/drei** - R3F 유틸리티 컴포넌트
+
+- **Motion** - New animation library (latest version of Framer Motion)
+- **Framer Motion** - Declarative animation library
+- **Three.js** - 3D graphics library
+- **@react-three/fiber** - Three.js renderer for React
+- **@react-three/drei** - R3F utility components
 
 ### Styling
-- **Tailwind CSS** - 유틸리티 우선 CSS
-- **class-variance-authority** - 조건부 클래스 관리
-- **tailwind-merge** - Tailwind 클래스 병합
-- **clsx** - 클래스명 유틸리티
 
-## 프로젝트 구조
+- **Tailwind CSS** - Utility-first CSS
+- **class-variance-authority** - Conditional class management
+- **tailwind-merge** - Tailwind class merging
+- **clsx** - Class name utility
+
+## Project Structure
 
 ```
 react-mov/
 ├── src/
 │   ├── components/
-│   │   ├── ui/              # 기본 UI 컴포넌트
-│   │   └── animations/       # 애니메이션 컴포넌트
-│   ├── registry/            # 컴포넌트 레지스트리
-│   │   ├── index.ts         # 레지스트리 설정
-│   │   └── components/      # 등록된 컴포넌트들
+│   │   ├── ui/              # Basic UI components
+│   │   └── animations/       # Animation components
+│   ├── registry/            # Component registry
+│   │   ├── index.ts         # Registry configuration
+│   │   └── components/      # Registered components
 │   ├── lib/
-│   │   └── utils.ts         # 유틸리티 함수
-│   ├── hooks/               # 커스텀 훅
-│   ├── App.tsx              # 메인 앱 컴포넌트
-│   ├── main.tsx             # 엔트리 포인트
-│   └── index.css            # 글로벌 스타일
-├── public/                  # 정적 파일
-├── components.json          # shadcn/ui 설정
-├── tailwind.config.js       # Tailwind 설정
-├── tsconfig.json           # TypeScript 설정
-├── vite.config.ts          # Vite 설정
-└── package.json            # 프로젝트 의존성
+│   │   └── utils.ts         # Utility functions
+│   ├── hooks/               # Custom hooks
+│   ├── App.tsx              # Main app component
+│   ├── main.tsx             # Entry point
+│   └── index.css            # Global styles
+├── public/                  # Static files
+├── components.json          # shadcn/ui configuration
+├── tailwind.config.js       # Tailwind configuration
+├── tsconfig.json           # TypeScript configuration
+├── vite.config.ts          # Vite configuration
+└── package.json            # Project dependencies
 ```
 
-## 시작하기
+## Getting Started
 
-### 필요 요구사항
-- Node.js 18.0 이상
-- npm 또는 yarn
+### Prerequisites
 
-### 설치 및 실행
+- Node.js 18.0 or higher
+- npm or yarn
 
-1. **저장소 클론**
+### Installation and Setup
+
+1. **Clone the repository**
+
 ```bash
 git clone https://github.com/mooyeon-choi/react-mov.git
 cd react-mov
 ```
 
-2. **의존성 설치**
+2. **Install dependencies**
+
 ```bash
 npm install
 ```
 
-3. **개발 서버 실행**
+3. **Run development server**
+
 ```bash
 npm run dev
 ```
 
-4. **빌드**
+4. **Build for production**
+
 ```bash
 npm run build
 ```
 
-### 사용 가능한 스크립트
+### Available Scripts
 
 ```bash
-npm run dev        # 개발 서버 실행 (기본: http://localhost:5173)
-npm run build      # 프로덕션 빌드
-npm run preview    # 빌드된 결과물 미리보기
-npm run typecheck  # TypeScript 타입 체크
-npm run lint       # 린트 검사
+npm run dev        # Start development server (default: http://localhost:5173)
+npm run build      # Production build
+npm run preview    # Preview built result
+npm run typecheck  # TypeScript type checking
+npm run lint       # Lint check
 ```
 
-## 컴포넌트 사용법
+## Component Usage
 
-### 1. CLI를 통한 설치 (추천)
+### 1. Installation via CLI (Recommended)
 
-향후 CLI 도구를 제공할 예정입니다:
+CLI tool will be available in the future:
+
 ```bash
 npx react-mov add [component-name]
 ```
 
-### 2. 수동 복사
+### 2. Manual Copy
 
-1. `src/registry/components/`에서 원하는 컴포넌트 찾기
-2. 프로젝트에 복사하여 사용
-3. 필요한 의존성 설치
+1. Find desired component in `src/registry/components/`
+2. Copy to your project
+3. Install required dependencies
 
-### 예시 컴포넌트 사용
+### Example Component Usage
 
 ```tsx
-import { MotionCard } from '@/components/animations/motion-card'
+import { MotionCard } from "@/components/animations/motion-card";
 
 function MyComponent() {
   return (
@@ -128,23 +137,24 @@ function MyComponent() {
     >
       <h2>Animated Content</h2>
     </MotionCard>
-  )
+  );
 }
 ```
 
-## 컴포넌트 개발 가이드
+## Component Development Guide
 
-### 새로운 컴포넌트 추가
+### Adding New Components
 
-1. **컴포넌트 파일 생성**
+1. **Create component file**
+
 ```tsx
 // src/components/animations/my-animation.tsx
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export interface MyAnimationProps {
-  className?: string
-  children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export function MyAnimation({ className, children }: MyAnimationProps) {
@@ -156,11 +166,12 @@ export function MyAnimation({ className, children }: MyAnimationProps) {
     >
       {children}
     </motion.div>
-  )
+  );
 }
 ```
 
-2. **레지스트리에 등록**
+2. **Register in registry**
+
 ```typescript
 // src/registry/index.ts
 export const registry = [
@@ -169,21 +180,22 @@ export const registry = [
     type: "components:animation",
     files: ["my-animation.tsx"],
     dependencies: ["framer-motion"],
-  }
-]
+  },
+];
 ```
 
-### 컴포넌트 작성 규칙
+### Component Writing Rules
 
-1. **TypeScript 타입 정의 필수**
-2. **Props 인터페이스 export**
-3. **cn() 유틸리티로 className 병합**
-4. **의존성 명시**
-5. **스토리북 예제 제공** (선택)
+1. **TypeScript type definitions required**
+2. **Export Props interface**
+3. **Merge className with cn() utility**
+4. **Specify dependencies**
+5. **Provide Storybook examples** (optional)
 
-## 컴포넌트 카테고리
+## Component Categories
 
 ### Motion (Framer Motion)
+
 - Fade In/Out
 - Slide Animations
 - Scale Animations
@@ -194,6 +206,7 @@ export const registry = [
 - Page Transitions
 
 ### 3D (Three.js)
+
 - 3D Card Flip
 - Particle Systems
 - 3D Text Effects
@@ -203,6 +216,7 @@ export const registry = [
 - Post-processing Effects
 
 ### UI Components
+
 - Animated Buttons
 - Loading Spinners
 - Progress Bars
@@ -212,11 +226,11 @@ export const registry = [
 - Accordions
 - Tabs
 
-## 배포 시스템
+## Distribution System
 
-### Registry 구조
+### Registry Structure
 
-컴포넌트는 다음 형식으로 registry에 등록됩니다:
+Components are registered in the registry in the following format:
 
 ```json
 {
@@ -234,18 +248,19 @@ export const registry = [
 }
 ```
 
-### 컴포넌트 메타데이터
+### Component Metadata
 
-각 컴포넌트는 메타데이터를 포함합니다:
-- 이름 및 설명
-- 의존성 목록
-- 사용 예제
-- API 문서
-- 브라우저 호환성
+Each component includes metadata:
 
-## 기여하기
+- Name and description
+- Dependency list
+- Usage examples
+- API documentation
+- Browser compatibility
 
-### 기여 방법
+## Contributing
+
+### How to Contribute
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -253,55 +268,58 @@ export const registry = [
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### 코드 스타일
+### Code Style
 
-- ESLint 규칙 준수
-- Prettier 포맷팅 적용
-- 컴포넌트별 단위 테스트 작성
-- Storybook 스토리 제공
+- Follow ESLint rules
+- Apply Prettier formatting
+- Write unit tests per component
+- Provide Storybook stories
 
-## 로드맵
+## Roadmap
 
-### Phase 1: 기초 설정 ✅
-- [x] 프로젝트 초기 설정
-- [x] TypeScript, Vite 구성
-- [x] Tailwind CSS 설정
-- [x] Framer Motion, Three.js 통합
-- [x] shadcn/ui 스타일 설정
+### Phase 1: Basic Setup ✅
 
-### Phase 2: 핵심 컴포넌트
-- [ ] 기본 모션 컴포넌트 10개
-- [ ] 3D 컴포넌트 5개
-- [ ] 인터랙티브 컴포넌트 5개
+- [x] Initial project setup
+- [x] TypeScript, Vite configuration
+- [x] Tailwind CSS setup
+- [x] Framer Motion, Three.js integration
+- [x] shadcn/ui style setup
 
-### Phase 3: 배포 시스템
-- [ ] CLI 도구 개발
-- [ ] 온라인 문서 사이트
-- [ ] 컴포넌트 플레이그라운드
-- [ ] npm 패키지 배포
+### Phase 2: Core Components
 
-### Phase 4: 확장
-- [ ] 애니메이션 프리셋 시스템
-- [ ] 테마 커스터마이징
-- [ ] 플러그인 시스템
-- [ ] 커뮤니티 컴포넌트
+- [ ] 10 basic motion components
+- [ ] 5 3D components
+- [ ] 5 interactive components
 
-## 라이선스
+### Phase 3: Distribution System
 
-MIT License - 자유롭게 사용, 수정, 배포 가능
+- [ ] CLI tool development
+- [ ] Online documentation site
+- [ ] Component playground
+- [ ] npm package distribution
 
-## 링크
+### Phase 4: Expansion
+
+- [ ] Animation preset system
+- [ ] Theme customization
+- [ ] Plugin system
+- [ ] Community components
+
+## License
+
+MIT License - Free to use, modify, and distribute
+
+## Links
 
 - [GitHub Repository](https://github.com/mooyeon-choi/react-mov)
-- [Documentation](#) (준비중)
-- [Component Gallery](#) (준비중)
-- [Discord Community](#) (준비중)
+- [Documentation](#) (Coming soon)
+- [Component Gallery](#) (Coming soon)
+- [Discord Community](#) (Coming soon)
 
-## 문의 및 지원
+## Contact & Support
 
 - Issues: [GitHub Issues](https://github.com/mooyeon-choi/react-mov/issues)
-- Email: your-email@example.com
-- Twitter: @yourhandle
+- Email: lon12080@naver.com
 
 ---
 
