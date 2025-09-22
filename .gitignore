@@ -34,6 +34,7 @@ dist-ssr
 # Build outputs
 /build
 /dist
+/docs
 /out
 /.next
 /.nuxt
@@ -109,3 +110,5 @@ debug/
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
+*storybook.log
+storybook-static
